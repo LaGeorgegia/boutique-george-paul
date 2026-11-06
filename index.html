@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Ma boutique de cartes</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Ma boutique de cartes</h1>
+    </header>
+    <main id="connexion">
+        <h2>Connexion</h2>
+        <p>Connecte-toi pour entrer dans la boutique.</p>
+
+        <form id="formulaire-connexion">
+            <label for="identifiant">Identifiant :</label>
+            <input type="text" id="identifiant" required>
+
+            <label for="mot-de-passe">Mot de passe :</label>
+            <input type="password" id="mot-de-passe" required>
+
+            <button type="submit">Se connecter</button>
+        </form>
+
+        <p id="message-connexion"></p>
+        <button id="bouton-creer-compte" type="button">Créer un compte</button>
+    </main>
+
+    <main id="inscription" hidden>
+        <h2>Créer un compte</h2>
+        <p>Remplis les champs pour créer ton compte.</p>
+
+        <form id="formulaire-inscription">
+            <label for="nouvel-identifiant">Choisis un identifiant :</label>
+            <input type="text" id="nouvel-identifiant" required>
+
+            <label for="nouveau-mot-de-passe">Choisis un mot de passe :</label>
+            <input type="password" id="nouveau-mot-de-passe" required>
+
+            <label for="confirmation-mot-de-passe">Confirme ton mot de passe :</label>
+            <input type="password" id="confirmation-mot-de-passe" required>
+
+            <button type="submit">Valider l'inscription</button>
+        </form>
+
+        <p id="message-inscription"></p>
+        <button id="bouton-retour" type="button">Retour à la connexion</button>
+    </main>
+
+    <main id="boutique" hidden>
+        <h2>Bienvenue <span id="nom-joueur"></span> !</h2>
+
+        <p>Tu possèdes <strong><span id="points">150</span> points</strong>.</p>
+
+        <h2>Nos cartes</h2>
+        <p id="message-achat">Choisis une carte.</p>
+
+        <div class="cartes">
+            <div class="carte">
+                <h3>cat-girl</h3>
+                <p>PV : 190</p>
+                <p>Attaque : 60</p>
+                <p>nom de l'attaque : etranglements</p>
+                <h4 style="color: #A335EE;">Épique</h4>
+                <h3>Prix : 40 points</h3>
+                <button onclick="acheterCarte(40, 'Cat-Girl', this)">Acheter</button>
+            </div>
+
+            <div class="carte">
+                <h3>Mongral</h3>
+                <p>PV : 140</p>
+                <p>Attaque : 200</p>
+                <p>nom de l'attaque :Piece control</p>
+                <h4 style="color: #FF8000;">Légendaire</h4>
+                <h3>Prix : 50 points</h3>
+                <button onclick="acheterCarte(50, 'Mongral', this)">Acheter</button>
+            </div>
+
+            <div class="carte">
+                <h3>Chris-tophe Colmb</h3>
+                <p>PV : 110</p>
+                <p>Attaque : 50</p>
+                <p>nom de l'attaque : Tubatrak</p>
+                <h4 style="color: #00FF00;">Commun</h4>
+                <h3>Prix : 30 points</h3>
+                <button onclick="acheterCarte(30, 'Chris-tophe Colmb', this)">Acheter</button>
+            </div>
+        </div>
+        <div class="cartes">
+             <div class="carte">
+                <h3>Discordienne</h3>
+                <p>PV : 100</p>
+                <p>Attaque : 60</p>
+                <p>nom de l'attaque : Clonnage de tocardo vocal</p>
+                <h4 style="color: #A335EE;">Épique</h4>
+                <h3>Prix : 40 points</h3>
+                <button onclick="acheterCarte(40, 'Discordienne', this)">Acheter</button>
+            </div>
+
+             <div class="carte">
+                <h3>E-girl</h3>
+                <p>PV : 180</p>
+                <p>Attaque : 70</p>
+                <p>nom de l'attaque : provocation de dédicuisse</p>
+                <h4 style="color: #FF8000;">Légendaire</h4>
+                <h3>Prix : 50 points</h3>
+                <button onclick="acheterCarte(50, 'E-girl', this)">Acheter</button>
+            </div>
+
+            <div class="carte">
+                <h3>Table</h3>
+                <p>PV : 10</p>
+                <p>Attaque : 150</p>
+                <p>nom de l'attaque : Khobzattack</p>
+                <h4 style="color: #00FF00;">Commun</h4>
+                <h3>Prix : 30 points</h3>
+                <button onclick="acheterCarte(30, 'Table', this)">Acheter</button>
+            </div>
+        </div>
+        <div class="cartes">
+             <div class="carte">
+                <h3>Chat</h3>
+                <p>PV : 150</p>
+                <p>Attaque : 100</p>
+                <p>nom de l'attaque : Griffe</p>
+                <h4 style="color: #00FF00;">Commun</h4>
+                <h3>Prix : 30 points</h3>
+                <button onclick="acheterCarte(30, 'Chat', this)">Acheter</button>
+            </div>
+
+              <div class="carte">
+                <h3>Bouboule</h3>
+                <p>PV : 190</p>
+                <p>Attaque : 80</p>
+                <p>nom de l'attaque : En feu</p>
+                <h4 style="color: #A335EE;">Épique</h4>
+                <h3>Prix : 40 points</h3>
+                <button onclick="acheterCarte(40, 'Bouboule', this)">Acheter</button>
+            </div>
+
+              <div class="carte">
+                <h3>Le roi lion</h3>
+                <p>PV : 180</p>
+                <p>Attaque : 70</p>
+                <p>nom de l'attaque : Carnivore</p>
+                <h4 style="color: #FF8000;">Légendaire</h4>
+                <h3>Prix : 50 points</h3>
+                <button onclick="acheterCarte(50, 'Le roi lion', this)">Acheter</button>
+            </div>
+        </div>
+
+        <button id="bouton-deconnexion" type="button">Se déconnecter</button>
+    </main>
+
+    <footer>
+        <p>Boutique de démonstration.</p>
+    </footer>
+
+</body>
+</html>
