@@ -54,6 +54,40 @@
 
         <p>Tu possèdes <strong><span id="points">150</span> points</strong>.</p>
 
+      <div class="zone-panier">
+      <button id="bouton-ouvrir-panier" type="button">
+        Mon panier
+        (<span id="compteur-panier">0</span>)
+      </button>
+    </div>
+
+ 
+     <section id="section-panier" hidden>
+        <h2>Mon panier</h2>
+        <p id="panier-vide">Ton panier est actuellement vide.</p>
+        <div id="liste-panier"></div>
+        <div class="total-panier">
+        <h3>
+            Total :
+            <span id="total-panier">0</span> points
+        </h3>
+      </div>
+
+ 
+      <div class="actions-panier">
+        <button id="bouton-vider-panier" type="button">
+            Vider le panier
+        </button>
+
+        <button id="bouton-fermer-panier" type="button">
+            Continuer mes achats
+        </button>
+        <button id="bouton-valider-panier" type="button">
+         Valider mon panier
+       </button>
+    </div>
+
+ </section>
         <h2>Nos cartes</h2>
         <p id="message-achat">Choisis une carte.</p>
 
