@@ -73,7 +73,13 @@ button:disabled {
     padding: 15px;
     text-align: center;
 }
-
+.carte img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
 .carte button {
     width: 100%;
 }
