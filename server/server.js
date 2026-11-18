@@ -71,4 +71,7 @@ async function demarrerServeur() {
 
 demarrerServeur();
 
+const cartesRouter = require('./cartes');
+app.use(express.json());
+app.use('/api/cartes', cartesRouter);
 // Rédiger ia 
