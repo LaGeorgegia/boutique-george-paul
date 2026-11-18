@@ -1,0 +1,211 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #eeeeee;
+    color: #222222;
+    margin: 0;
+}
+
+
+header {
+    background-color: #304563;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+
+main {
+    width: 80%;
+    max-width: 700px;
+    margin: 25px auto;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+}
+
+[hidden] {
+    display: none;
+}
+
+label {
+    display: block;
+    margin-top: 12px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+
+button {
+    background-color: #405f8a;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2d4568;
+}
+
+button:disabled {
+    background-color: #888888;
+    cursor: not-allowed;
+}
+
+.cartes {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.carte {
+    flex: 1;
+    background-color: #f7f7f7;
+    border: 1px solid #bbbbbb;
+    padding: 15px;
+    text-align: center;
+}
+.carte img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.carte button {
+    width: 100%;
+}
+
+
+footer {
+    text-align: center;
+    color: #555555;
+    padding: 10px;
+}
+
+
+/* ==================================
+   SYSTEME DE PANIER
+================================== */
+
+/* Bouton d'ouverture du panier */
+.zone-panier {
+    display: flex;
+    justify-content: flex-end;
+    margin: 20px 0;
+}
+
+#bouton-ouvrir-panier {
+    background: linear-gradient(135deg, #6c3bd1, #a335ee);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    padding: 13px 22px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#bouton-ouvrir-panier:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(163, 53, 238, 0.3);
+}
+
+/* Section principale du panier */
+#section-panier {
+    background: #20202b;
+    color: white;
+    border: 1px solid #444456;
+    border-radius: 16px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+#section-panier[hidden] {
+    display: none !important;
+}
+
+#section-panier h2 {
+    margin-top: 0;
+    color: white;
+    border-bottom: 1px solid #444456;
+    padding-bottom: 15px;
+}
+
+/* Message panier vide */
+#panier-vide {
+    text-align: center;
+    color: #b8b8c7;
+    padding: 25px 10px;
+    font-size: 16px;
+}
+
+
+#liste-panier {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.total-panier {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #444456;
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+.total-panier h3 {
+    color: #a98aff;
+    font-size: 21px;
+}
+
+
+.actions-panier {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+#bouton-vider-panier,
+#bouton-fermer-panier {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#bouton-vider-panier {
+    background: #a83245;
+    color: white;
+}
+
+#bouton-vider-panier:hover {
+    background: #d13c54;
+}
+
+#bouton-fermer-panier {
+    background: #444456;
+    color: white;
+}
+
+#bouton-fermer-panier:hover {
+    background: #5b5b70;
+}
+
+
